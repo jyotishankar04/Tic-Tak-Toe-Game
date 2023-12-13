@@ -104,6 +104,7 @@ backdrop-filter: blur(10px);
     color: #e95a66f7;
     border-radius:0 0 30px 30px ;
     transition: all ease 0.5s;
+    z-index: 100;
 }
 .showWinner .showBtn{
     width: 80%;
