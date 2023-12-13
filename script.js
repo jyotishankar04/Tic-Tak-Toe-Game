@@ -41,18 +41,7 @@ const disabledBoxes = ()=>{
 }
 
 
-const resetFun= () =>{
-    let i = 0;
-    for(btn of btns){
-        if(i === 0){
-            btn.innerHTML = ".";
-            i++;
-        }else {
-            btn.innerHTML = " ";
-            i++;
-        }
-    }
-}
+
 reset.addEventListener("click",()=>{
     resetFun();
 });
@@ -84,12 +73,24 @@ const checkWinner= ()=>{
        
     }
 }
-
-newGameBtn.addEventListener("click",()=>{
-    winnerPopUp.style.top = "-300px";
-    resetFun();
+const resetFun= ()=>{
+    let i = 0;
+    for(btn of btns){
+        if(i === 0){
+            btn.innerHTML = ".";
+            i++;
+        }else {
+            btn.innerHTML = " ";
+            i++;
+        }
+    }
     for(btn of btns){
         btn.disabled = false;
     }
+}
+newGameBtn.addEventListener("click",()=>{
+    winnerPopUp.style.top = "-300px";
+    resetFun();
+
 })
 
